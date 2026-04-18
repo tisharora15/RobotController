@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\robot-controller-api.csproj": {}
+    "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\robot_controller_api.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\robot-controller-api.csproj": {
+    "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\robot_controller_api.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\robot-controller-api.csproj",
-        "projectName": "robot_controller_api",
-        "projectPath": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\robot-controller-api.csproj",
+        "projectUniqueName": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\robot_controller_api.Tests.csproj",
+        "projectName": "robot_controller_api.Tests",
+        "projectPath": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\robot_controller_api.Tests.csproj",
         "packagesPath": "C:\\Users\\tisha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\",
+        "outputPath": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tisha\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -44,33 +44,33 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "AspNetCore.HealthChecks.NpgSql": {
+            "FluentAssertions": {
               "target": "Package",
-              "version": "[8.0.1, )"
+              "version": "[6.12.0, )"
             },
-            "FastMember": {
-              "target": "Package",
-              "version": "[1.5.0, )"
-            },
-            "Microsoft.AspNetCore.Diagnostics.HealthChecks": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.Mvc.Testing": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[8.0.0, )"
             },
-            "Swashbuckle.AspNetCore": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[6.5.0, )"
+              "version": "[17.8.0, )"
             },
-            "prometheus-net.AspNetCore": {
+            "Moq": {
               "target": "Package",
-              "version": "[8.2.1, )"
+              "version": "[4.20.69, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.6.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.5.4, )"
             }
           },
           "imports": [
@@ -90,10 +90,6 @@
               "version": "[8.0.25, 8.0.25]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.25, 8.0.25]"
-            },
-            {
               "name": "Microsoft.NETCore.App.Ref",
               "version": "[8.0.25, 8.0.25]"
             },
@@ -103,9 +99,6 @@
             }
           ],
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

@@ -1,0 +1,24 @@
+version: "3.9"
+
+# Production overrides — used via:
+#   docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d
+
+services:
+
+  api:
+    image: robot_controller_api:${IMAGE_TAG:-latest}   # use pre-built image in prod
+    restart: always
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      DB_CONNECTION_STRING:   "${PROD_DB_CONNECTION_STRING}"
+    deploy:
+      replicas: 2
+      resources:
+        limits:
+          cpus:   "0.5"
+          memory: 256M
+
+  postgres:
+    restart: always
+    volumes:
+      - /data/postgres:/var/lib/postgresql/data  # persistent host mount in prod

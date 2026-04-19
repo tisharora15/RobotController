@@ -42,22 +42,18 @@ pipeline {
         }
 
         // ── STAGE 3: TEST ────────────────────────────────────────────────
-        stage("Test") {
-            steps {
-                echo "Running automated tests..."
-                bat """
-                    dotnet test tests/robot_controller_api.Tests.csproj ^
-                        --logger "trx;LogFileName=test-results.trx" ^
-                        --results-directory ./TestResults ^
-                        --no-restore
-                """
-            }
-            post {
-                always {
-                    junit "TestResults/**/*.trx"
-                }
-            }
+stage("Test") {
+    steps {
+        echo "Running automated tests..."
+        bat "dotnet restore tests/robot_controller_api.Tests.csproj"
+        bat "dotnet test tests/robot_controller_api.Tests.csproj --logger trx --results-directory .\\TestResults"
+    }
+    post {
+        always {
+            junit allowEmptyResults: true, testResults: "TestResults/**/*.trx"
         }
+    }
+}
 
         // ── STAGE 4: CODE QUALITY ────────────────────────────────────────
         stage("Code Quality") {

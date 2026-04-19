@@ -9,10 +9,9 @@ RUN dotnet restore robot-controller-api.csproj
 
 # Copy everything and build
 COPY . ./
-RUN dotnet publish robot-controller-api.csproj \
+    RUN dotnet publish robot-controller-api.csproj \
     -c Release \
-    -o /app/publish \
-    --no-restore
+    -o /app/publish
 
 # ── Stage 2: Test ──────────────────────────────────────────────────────────
 FROM build AS test

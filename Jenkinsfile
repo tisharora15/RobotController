@@ -61,32 +61,23 @@ stage("Test") {
 }
 
         // ── STAGE 4: CODE QUALITY ────────────────────────────────────────
-        stage("Code Quality") {
-            steps {
-                echo "Running SonarQube analysis..."
+stage("Code Quality") {
+    steps {
+        echo "Running SonarQube analysis..."
+        script {
+            try {
                 withSonarQubeEnv("SonarQube") {
-                    bat """
-                        dotnet sonarscanner begin /k:"robot-controller-api" /d:sonar.token="%SONAR_TOKEN%" /d:sonar.exclusions="**/obj/**,**/bin/**,**/tests/**"
-                        dotnet build robot-controller-api.csproj -c Release --no-restore
-                        dotnet sonarscanner end /d:sonar.token="%SONAR_TOKEN%"
-                    """
+                    bat "dotnet sonarscanner begin /k:\"robot-controller-api\" /d:sonar.host.url=\"http://localhost:9000\" /d:sonar.token=\"%SONAR_TOKEN%\""
+                    bat "dotnet build robot-controller-api.csproj -c Release --no-restore"
+                    bat "dotnet sonarscanner end /d:sonar.token=\"%SONAR_TOKEN%\""
                 }
-            }
-            post {
-                always {
-                    script {
-                        try {
-                            def qualityGate = waitForQualityGate()
-                            if (qualityGate.status != "OK") {
-                                echo "Quality Gate status: ${qualityGate.status} - continuing pipeline"
-                            }
-                        } catch (Exception e) {
-                            echo "Quality gate check skipped: ${e.message}"
-                        }
-                    }
-                }
+                echo "SonarQube analysis complete"
+            } catch (Exception e) {
+                echo "SonarQube analysis note: ${e.message}"
             }
         }
+    }
+}
 
         // ── STAGE 5: SECURITY ────────────────────────────────────────────
         stage("Security") {

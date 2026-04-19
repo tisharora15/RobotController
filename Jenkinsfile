@@ -103,21 +103,28 @@ stage("Code Quality") {
 
         // ── STAGE 6: DEPLOY ──────────────────────────────────────────────
         stage("Deploy") {
-            steps {
-                echo "Deploying to staging environment..."
-                bat "docker compose -f docker-compose.yml --project-name staging up -d --build"
-                echo "Waiting for application to start..."
-                bat "ping -n 16 127.0.0.1 > nul"
-                script {
-                    try {
-                        bat "curl -f http://localhost:8080/health/live"
-                        echo "Staging deployment successful - API is healthy"
-                    } catch (Exception e) {
-                        echo "Health check pending - application may still be starting"
-                    }
-                }
+    steps {
+        echo "Deploying to staging environment..."
+        script {
+            try {
+                bat "docker compose -f docker-compose.yml --project-name staging down --remove-orphans"
+            } catch (Exception e) {
+                echo "Cleanup note: ${e.message}"
             }
         }
+        bat "docker compose -f docker-compose.yml --project-name staging up -d --build"
+        echo "Waiting for application to start..."
+        bat "ping -n 21 127.0.0.1 > nul"
+        script {
+            try {
+                bat "curl -f http://localhost:8080/health/live"
+                echo "Staging deployment successful - API is healthy"
+            } catch (Exception e) {
+                echo "Health check pending - application may still be starting"
+            }
+        }
+    }
+}
 
         // ── STAGE 7: RELEASE ─────────────────────────────────────────────
         stage("Release") {

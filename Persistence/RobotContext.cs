@@ -18,12 +18,20 @@ public partial class RobotContext : DbContext
 
     public virtual DbSet<RobotCommand> RobotCommands { get; set; }
     
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+{
+    if (!optionsBuilder.IsConfigured)
+    {
+        var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING")
+            ?? "Host=postgres;Database=sit331;Username=postgres;Password=prime";
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder
-            .UseNpgsql("Host=localhost;Database=sit331;Username=postgres;Password=prime")
+        optionsBuilder
+            .UseNpgsql(connectionString)
             .LogTo(Console.WriteLine)
             .EnableSensitiveDataLogging();
+    }
+}
+   
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

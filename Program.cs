@@ -8,10 +8,10 @@ using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// ── Configuration ──────────────────────────────────────────────────────────
+
 var connectionString = Environment.GetEnvironmentVariable("DB_CONNECTION_STRING")
     ?? builder.Configuration.GetConnectionString("DefaultConnection")
-    ?? "Host=localhost;Database=sit331;Username=postgres;Password=prime";
+    ?? "Host=postgres;Database=sit331;Username=postgres;Password=prime";
 
 // ── Services ───────────────────────────────────────────────────────────────
 builder.Services.AddControllers();

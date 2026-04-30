@@ -62,26 +62,24 @@ pipeline {
             }
         }
 
-        // ── STAGE 4: CODE QUALITY ────────────────────────────────────────
         stage("Code Quality") {
-            steps {
-                echo "Running SonarQube analysis..."
-                script {
-                    try {
-                        bat "dotnet tool install --global dotnet-sonarscanner --version 5.15.0 || echo Already installed"
-                        withSonarQubeEnv("SonarQube") {
-                            bat "dotnet sonarscanner begin /k:\"robot-controller-api\" /d:sonar.host.url=\"http://localhost:9000\" /d:sonar.token=\"%SONAR_TOKEN%\""
-                            bat "dotnet build robot-controller-api.csproj -c Release --no-restore"
-                            bat "dotnet sonarscanner end"
-                        }
-                        echo "SonarQube analysis complete"
-                    } catch (Exception e) {
-                        echo "SonarQube analysis note: ${e.message}"
-                    }
+    steps {
+        echo "Running SonarQube analysis..."
+        script {
+            try {
+                bat "dotnet tool install --global dotnet-sonarscanner --version 5.15.0 || echo Already installed"
+                withSonarQubeEnv("SonarQube") {
+                    bat "dotnet sonarscanner begin /k:\"robot-controller-api\" /d:sonar.host.url=\"http://localhost:9000\" /d:sonar.token=\"%SONAR_TOKEN%\""
+                    bat "dotnet build robot-controller-api.csproj -c Release --no-restore"
+                    bat "dotnet sonarscanner end /d:sonar.login=\"%SONAR_TOKEN%\""
                 }
+                echo "SonarQube analysis complete"
+            } catch (Exception e) {
+                echo "SonarQube analysis note: ${e.message}"
             }
         }
-
+    }
+}
         // ── STAGE 5: SECURITY ────────────────────────────────────────────
         stage("Security") {
             steps {

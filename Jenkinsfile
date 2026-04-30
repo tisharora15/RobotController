@@ -63,47 +63,48 @@ pipeline {
         }
 
         // ── STAGE 4: CODE QUALITY ────────────────────────────────────────
-stage("Code Quality") {
-    steps {
-        echo "Running SonarQube analysis..."
-        script {
-            try {
-                bat "dotnet tool install --global dotnet-sonarscanner --version 5.15.0 || echo Already installed"
-                withSonarQubeEnv("SonarQube") {
-                    bat "dotnet sonarscanner begin /k:\"robot-controller-api\" /d:sonar.host.url=\"http://localhost:9000\" /d:sonar.token=\"%SONAR_TOKEN%\""
-                    bat "dotnet build robot-controller-api.csproj -c Release --no-restore"
-                    bat "dotnet sonarscanner end /d:sonar.token=\"%SONAR_TOKEN%\""
+        stage("Code Quality") {
+            steps {
+                echo "Running SonarQube analysis..."
+                script {
+                    try {
+                        bat "dotnet tool install --global dotnet-sonarscanner --version 5.15.0 || echo Already installed"
+                        withSonarQubeEnv("SonarQube") {
+                            bat "dotnet sonarscanner begin /k:\"robot-controller-api\" /d:sonar.host.url=\"http://localhost:9000\" /d:sonar.token=\"%SONAR_TOKEN%\""
+                            bat "dotnet build robot-controller-api.csproj -c Release --no-restore"
+                            bat "dotnet sonarscanner end"
+                        }
+                        echo "SonarQube analysis complete"
+                    } catch (Exception e) {
+                        echo "SonarQube analysis note: ${e.message}"
+                    }
                 }
-                echo "SonarQube analysis complete"
-            } catch (Exception e) {
-                echo "SonarQube analysis note: ${e.message}"
             }
         }
-    }
-}
 
         // ── STAGE 5: SECURITY ────────────────────────────────────────────
-stage("Security") {
-    steps {
-        echo "Running security scan with Snyk..."
-        script {
-            try {
-                bat "npm install -g snyk || echo Snyk already installed"
-                bat "snyk auth %SNYK_TOKEN% || echo Snyk auth skipped"
-                bat "snyk test --file=robot-controller-api.csproj --severity-threshold=high --json > snyk-results.json || exit 0"
-                echo "Snyk scan completed successfully"
-            } catch (Exception e) {
-                echo "Snyk scan completed: ${e.message}"
+        stage("Security") {
+            steps {
+                echo "Running security scan with Snyk..."
+                script {
+                    try {
+                        bat "npm install -g snyk || echo Snyk already installed"
+                        bat "npx snyk auth %SNYK_TOKEN% || echo Snyk auth skipped"
+                        bat "npx snyk test --file=robot-controller-api.csproj --severity-threshold=high --json > snyk-results.json || exit 0"
+                        echo "Snyk scan completed successfully"
+                    } catch (Exception e) {
+                        echo "Snyk scan completed: ${e.message}"
+                    }
+                }
+                echo "Security scan complete."
+            }
+            post {
+                always {
+                    archiveArtifacts artifacts: "snyk-results.json", allowEmptyArchive: true
+                }
             }
         }
-        echo "Security scan complete."
-    }
-    post {
-        always {
-            archiveArtifacts artifacts: "snyk-results.json", allowEmptyArchive: true
-        }
-    }
-}
+
         // ── STAGE 6: DEPLOY ──────────────────────────────────────────────
         stage("Deploy") {
             steps {

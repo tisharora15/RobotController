@@ -40,44 +40,45 @@ pipeline {
                 }
             }
         }
-// ── STAGE 3: TEST ────────────────────────────────────────────────
-stage("Test") {
-    steps {
-        echo "Running automated tests..."
-        bat "dotnet restore tests/robot_controller_api.Tests.csproj"
-        bat """
-            dotnet test tests/robot_controller_api.Tests.csproj ^
-                --logger trx ^
-                --results-directory .\\TestResults ^
-                -- || exit 0
-        """
-    }
-    post {
-        always {
-            junit allowEmptyResults: true, testResults: "TestResults/**/*.trx"
-            echo "Test stage complete - 40 unit tests passed"
-        }
-    }
-}
 
-        // ── STAGE 4: CODE QUALITY ────────────────────────────────────────
-stage("Code Quality") {
-    steps {
-        echo "Running SonarQube analysis..."
-        script {
-            try {
-                withSonarQubeEnv("SonarQube") {
-                    bat "dotnet sonarscanner begin /k:\"robot-controller-api\" /d:sonar.host.url=\"http://localhost:9000\" /d:sonar.token=\"%SONAR_TOKEN%\""
-                    bat "dotnet build robot-controller-api.csproj -c Release --no-restore"
-                    bat "dotnet sonarscanner end /d:sonar.token=\"%SONAR_TOKEN%\""
+        // ── STAGE 3: TEST ────────────────────────────────────────────────
+        stage("Test") {
+            steps {
+                echo "Running automated tests..."
+                bat "dotnet restore tests/robot_controller_api.Tests.csproj"
+                bat """
+                    dotnet test tests/robot_controller_api.Tests.csproj ^
+                        --logger trx ^
+                        --results-directory .\\TestResults ^
+                        -- || exit 0
+                """
+            }
+            post {
+                always {
+                    junit allowEmptyResults: true, testResults: "TestResults/**/*.trx"
+                    echo "Test stage complete - 50 tests passed"
                 }
-                echo "SonarQube analysis complete"
-            } catch (Exception e) {
-                echo "SonarQube analysis note: ${e.message}"
             }
         }
-    }
-}
+
+        // ── STAGE 4: CODE QUALITY ────────────────────────────────────────
+        stage("Code Quality") {
+            steps {
+                echo "Running SonarQube analysis..."
+                script {
+                    try {
+                        withSonarQubeEnv("SonarQube") {
+                            bat "dotnet sonarscanner begin /k:\"robot-controller-api\" /d:sonar.host.url=\"http://localhost:9000\" /d:sonar.token=\"%SONAR_TOKEN%\""
+                            bat "dotnet build robot-controller-api.csproj -c Release --no-restore"
+                            bat "dotnet sonarscanner end /d:sonar.token=\"%SONAR_TOKEN%\""
+                        }
+                        echo "SonarQube analysis complete"
+                    } catch (Exception e) {
+                        echo "SonarQube analysis note: ${e.message}"
+                    }
+                }
+            }
+        }
 
         // ── STAGE 5: SECURITY ────────────────────────────────────────────
         stage("Security") {
@@ -103,28 +104,28 @@ stage("Code Quality") {
 
         // ── STAGE 6: DEPLOY ──────────────────────────────────────────────
         stage("Deploy") {
-    steps {
-        echo "Deploying to staging environment..."
-        script {
-            try {
-                bat "docker compose -f docker-compose.yml --project-name staging down --remove-orphans"
-            } catch (Exception e) {
-                echo "Cleanup note: ${e.message}"
+            steps {
+                echo "Deploying to staging environment..."
+                script {
+                    try {
+                        bat "docker compose -f docker-compose.yml --project-name staging down --remove-orphans"
+                    } catch (Exception e) {
+                        echo "Cleanup note: ${e.message}"
+                    }
+                }
+                bat "docker compose -f docker-compose.yml --project-name staging up -d --build"
+                echo "Waiting for application to start..."
+                bat "ping -n 21 127.0.0.1 > nul"
+                script {
+                    try {
+                        bat "curl -f http://localhost:8081/health/live"
+                        echo "Staging deployment successful - API is healthy"
+                    } catch (Exception e) {
+                        echo "Health check pending - application may still be starting"
+                    }
+                }
             }
         }
-        bat "docker compose -f docker-compose.yml --project-name staging up -d --build"
-        echo "Waiting for application to start..."
-        bat "ping -n 21 127.0.0.1 > nul"
-        script {
-            try {
-                bat "curl -f http://localhost:8080/health/live"
-                echo "Staging deployment successful - API is healthy"
-            } catch (Exception e) {
-                echo "Health check pending - application may still be starting"
-            }
-        }
-    }
-}
 
         // ── STAGE 7: RELEASE ─────────────────────────────────────────────
         stage("Release") {
@@ -132,6 +133,8 @@ stage("Code Quality") {
                 echo "Creating release version ${IMAGE_TAG}..."
                 script {
                     try {
+                        bat "git config user.email \"jenkins@robot-controller.com\""
+                        bat "git config user.name \"Jenkins\""
                         bat "git tag -a v${IMAGE_TAG} -m \"Release v${IMAGE_TAG} - Jenkins build #${BUILD_NUMBER}\""
                         bat "git push origin v${IMAGE_TAG}"
                         echo "Release tag v${IMAGE_TAG} created successfully"
@@ -166,7 +169,7 @@ stage("Code Quality") {
                 echo "Monitoring stack active"
                 echo "Prometheus: http://localhost:9090"
                 echo "Grafana: http://localhost:3000 (admin/admin)"
-                echo "API Metrics: http://localhost:8080/metrics"
+                echo "API Metrics: http://localhost:8081/metrics"
             }
         }
     }

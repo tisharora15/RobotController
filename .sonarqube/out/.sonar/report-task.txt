@@ -1,0 +1,6 @@
+projectKey=robot-controller-api
+serverUrl=http://localhost:9000
+serverVersion=26.4.0.121862
+dashboardUrl=http://localhost:9000/dashboard?id=robot-controller-api
+ceTaskId=d176c47a-d4d1-4057-979e-6b236acb08c8
+ceTaskUrl=http://localhost:9000/api/ce/task?id=d176c47a-d4d1-4057-979e-6b236acb08c8

@@ -1,0 +1,1111 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "5.3.0.0",
+        "fileVersion": "5.3.0-2.26153.122 (4d3023de605a78ba3e59e50c657eed70f125c68a)",
+        "semanticVersion": "5.3.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8625",
+          "level": "warning",
+          "message": "Cannot convert null literal to non-nullable reference type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/IRepository.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 85,
+                  "endLine": 10,
+                  "endColumn": 89
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Maps' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 12,
+                  "endLine": 8,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 31,
+                  "endLine": 17,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'RobotCommands' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 12,
+                  "endLine": 8,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 40,
+                  "endLine": 19,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Maps' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 12,
+                  "endLine": 12,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 31,
+                  "endLine": 17,
+                  "endColumn": 35
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'RobotCommands' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 12,
+                  "endLine": 12,
+                  "endColumn": 24
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 40,
+                  "endLine": 19,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8602",
+          "level": "warning",
+          "message": "Dereference of a possibly null reference.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/ExtensionMethods.cs",
+                "region": {
+                  "startLine": 10,
+                  "startColumn": 44,
+                  "endLine": 10,
+                  "endColumn": 50
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2068",
+          "level": "warning",
+          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/appsettings.json",
+                "region": {
+                  "startLine": 3,
+                  "startColumn": 27,
+                  "endLine": 3,
+                  "endColumn": 90
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1016",
+          "level": "note",
+          "message": "Mark assemblies with assembly version",
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1118",
+          "level": "warning",
+          "message": "Add a 'protected' constructor or the 'static' keyword to the class declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Program.cs",
+                "region": {
+                  "startLine": 121,
+                  "startColumn": 22,
+                  "endLine": 121,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2068",
+          "level": "warning",
+          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/IRepository.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 18,
+                  "endLine": 8,
+                  "endColumn": 74
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3251",
+          "level": "warning",
+          "message": "Supply an implementation for this partial method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 99,
+                  "startColumn": 5,
+                  "endLine": 99,
+                  "endColumn": 12
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'timestamp without time zone' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 32,
+                  "endLine": 53,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 57,
+                  "startColumn": 32,
+                  "endLine": 57,
+                  "endColumn": 61
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 32,
+                  "endLine": 87,
+                  "endColumn": 61
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 32,
+                  "endLine": 91,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S6968",
+          "level": "warning",
+          "message": "Annotate this method with ProducesResponseType containing the return type for successful responses.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Controllers/MapsController.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 26,
+                  "endLine": 37,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Controllers/MapsController.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 16,
+                  "endLine": 46,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null
+            }
+          }
+        },
+        {
+          "ruleId": "S6968",
+          "level": "warning",
+          "message": "Annotate this method with ProducesResponseType containing the return type for successful responses.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Controllers/RobotCommandsController.cs",
+                "region": {
+                  "startLine": 36,
+                  "startColumn": 26,
+                  "endLine": 36,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Controllers/RobotCommandsController.cs",
+                "region": {
+                  "startLine": 45,
+                  "startColumn": 16,
+                  "endLine": 45,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null
+            }
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Models/Map.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 16,
+                  "endLine": 7,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Models/Map.cs",
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 16,
+                  "endLine": 9,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Models/Map.cs",
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 16,
+                  "endLine": 11,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Models/Map.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 21,
+                  "endLine": 17,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Models/Map.cs",
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 21,
+                  "endLine": 19,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6968",
+          "level": "warning",
+          "message": "Annotate this method with ProducesResponseType containing the return type for successful responses.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Controllers/MapsController.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 26,
+                  "endLine": 51,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Controllers/MapsController.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 16,
+                  "endLine": 68,
+                  "endColumn": 23
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null
+            }
+          }
+        },
+        {
+          "ruleId": "S2068",
+          "level": "warning",
+          "message": "\"password\" detected here, make sure this is not a hard-coded credential.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 24,
+                  "endLine": 24,
+                  "endColumn": 89
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Models/Robotcommand.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 16,
+                  "endLine": 7,
+                  "endColumn": 18
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Models/Robotcommand.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 17,
+                  "endLine": 13,
+                  "endColumn": 30
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Models/Robotcommand.cs",
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 21,
+                  "endLine": 15,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6964",
+          "level": "warning",
+          "message": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Models/Robotcommand.cs",
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 21,
+                  "endLine": 17,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6968",
+          "level": "warning",
+          "message": "Annotate this method with ProducesResponseType containing the return type for successful responses.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Controllers/MapsController.cs",
+                "region": {
+                  "startLine": 94,
+                  "startColumn": 26,
+                  "endLine": 94,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Controllers/MapsController.cs",
+                "region": {
+                  "startLine": 108,
+                  "startColumn": 16,
+                  "endLine": 108,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null
+            }
+          }
+        },
+        {
+          "ruleId": "S6968",
+          "level": "warning",
+          "message": "Annotate this method with ProducesResponseType containing the return type for successful responses.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Controllers/RobotCommandsController.cs",
+                "region": {
+                  "startLine": 50,
+                  "startColumn": 26,
+                  "endLine": 50,
+                  "endColumn": 41
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Controllers/RobotCommandsController.cs",
+                "region": {
+                  "startLine": 71,
+                  "startColumn": 16,
+                  "endLine": 71,
+                  "endColumn": 27
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null
+            }
+          }
+        },
+        {
+          "ruleId": "S5122",
+          "level": "warning",
+          "message": "Make sure this permissive CORS policy is safe here.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Program.cs",
+                "region": {
+                  "startLine": 68,
+                  "startColumn": 9,
+                  "endLine": 68,
+                  "endColumn": 32
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CA1861",
+          "level": "note",
+          "message": "Prefer 'static readonly' fields over constant array arguments if the called method is called repeatedly and is not mutating the passed array",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Program.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 84,
+                  "endLine": 51,
+                  "endColumn": 99
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "paramName": "tags"
+            }
+          }
+        },
+        {
+          "ruleId": "CA1861",
+          "level": "note",
+          "message": "Prefer 'static readonly' fields over constant array arguments if the called method is called repeatedly and is not mutating the passed array",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Program.cs",
+                "region": {
+                  "startLine": 60,
+                  "startColumn": 19,
+                  "endLine": 60,
+                  "endColumn": 45
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "paramName": "tags"
+            }
+          }
+        },
+        {
+          "ruleId": "CA1861",
+          "level": "note",
+          "message": "Prefer 'static readonly' fields over constant array arguments if the called method is called repeatedly and is not mutating the passed array",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Program.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 84,
+                  "endLine": 61,
+                  "endColumn": 99
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "paramName": "tags"
+            }
+          }
+        },
+        {
+          "ruleId": "S3251",
+          "level": "warning",
+          "message": "Supply an implementation for the partial method, otherwise this call will be ignored.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Persistence/RobotContext.cs",
+                "region": {
+                  "startLine": 96,
+                  "startColumn": 9,
+                  "endLine": 96,
+                  "endColumn": 46
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S6966",
+          "level": "warning",
+          "message": "Await RunAsync instead.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/tisha/OneDrive/Desktop/Sem4/Professional%20Development/HD/robot-controller-api/Program.cs",
+                "region": {
+                  "startLine": 119,
+                  "startColumn": 1,
+                  "endLine": 119,
+                  "endColumn": 10
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S3904",
+          "level": "warning",
+          "message": "Provide an 'AssemblyVersion' attribute for assembly 'robot-controller-api'.",
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CA1016": {
+          "id": "CA1016",
+          "shortDescription": "Mark assemblies with assembly version",
+          "fullDescription": "The .NET Framework uses the version number to uniquely identify an assembly, and to bind to types in strongly named assemblies. The version number is used together with version and publisher policy. By default, applications run only with the assembly version with which they were built.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1016",
+          "properties": {
+            "category": "Design",
+            "isEnabledByDefault": true,
+            "tags": [
+              "PortedFromFxCop",
+              "Telemetry",
+              "EnabledRuleInAggressiveMode",
+              "CompilationEnd"
+            ]
+          }
+        },
+        "CA1861": {
+          "id": "CA1861",
+          "shortDescription": "Avoid constant arrays as arguments",
+          "fullDescription": "Constant arrays passed as arguments are not reused when called repeatedly, which implies a new array is created each time. Consider extracting them to 'static readonly' fields to improve performance if the passed array is not mutated within the called method.",
+          "defaultLevel": "note",
+          "helpUri": "https://learn.microsoft.com/dotnet/fundamentals/code-analysis/quality-rules/ca1861",
+          "properties": {
+            "category": "Performance",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Telemetry",
+              "EnabledRuleInAggressiveMode"
+            ]
+          }
+        },
+        "CS8602": {
+          "id": "CS8602",
+          "shortDescription": "Dereference of a possibly null reference.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8602)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8625": {
+          "id": "CS8625",
+          "shortDescription": "Cannot convert null literal to non-nullable reference type.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8625)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1118": {
+          "id": "S1118",
+          "shortDescription": "Utility classes should not have public constructors",
+          "fullDescription": "Whenever there are portions of code that are duplicated and do not depend on the state of their container class, they can be centralized inside a \"utility class\". A utility class is a class that only has static members, hence it should not be instantiated.",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S1192": {
+          "id": "S1192",
+          "shortDescription": "String literals should not be duplicated",
+          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S2068": {
+          "id": "S2068",
+          "shortDescription": "Credentials should not be hard-coded",
+          "fullDescription": "Hard-coding credentials in source code or binaries makes it easy for attackers to extract sensitive information, especially in distributed or open-source applications. This practice exposes your application to significant security risks.",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Major Vulnerability",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3251": {
+          "id": "S3251",
+          "shortDescription": "Implementations should be provided for \"partial\" methods",
+          "fullDescription": "partial methods allow an increased degree of flexibility in programming a system. Hooks can be added to generated code by invoking methods that define their signature, but might not have an implementation yet. But if the implementation is still missing when the code makes it to production, the compiler silently removes the call. In the best case scenario, such calls simply represent cruft, but in they worst case they are critical, missing functionality, the loss of which will lead to unexpected results at runtime.",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S3904": {
+          "id": "S3904",
+          "shortDescription": "Assemblies should have version information",
+          "fullDescription": "The AssemblyVersion attribute is used to specify the version number of an assembly. An assembly is a compiled unit of code, which can be marked with a version number by applying the attribute to an assembly’s source code file.",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S5122": {
+          "id": "S5122",
+          "shortDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive",
+          "fullDescription": "Having a permissive Cross-Origin Resource Sharing policy is security-sensitive. It has led in the past to the following vulnerabilities:",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Minor Security Hotspot",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6964": {
+          "id": "S6964",
+          "shortDescription": "Value type property used as input in a controller action should be nullable, required or annotated with the JsonRequiredAttribute to avoid under-posting.",
+          "fullDescription": "\"Under-posting\" refers to a situation where a client sends less data than expected to the server during an HTTP request, for example when the client omits some properties from the request body that the server expects to receive.",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6966": {
+          "id": "S6966",
+          "shortDescription": "Awaitable method should be used",
+          "fullDescription": "In an async method, any blocking operations should be avoided.",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S6968": {
+          "id": "S6968",
+          "shortDescription": "Actions that return a value should be annotated with ProducesResponseTypeAttribute containing the return type",
+          "fullDescription": "In an ASP.NET Core Web API, controller actions can optionally return a result value. If a controller action returns a value in the happy path, for example ControllerBase.Ok(Object), annotating the action with one of the [ProducesResponseType] overloads that describe the type is recommended.",
+          "defaultLevel": "warning",
+          "properties": {
+            "category": "Major Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

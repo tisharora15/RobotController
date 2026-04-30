@@ -1,0 +1,96 @@
+{
+  "scannerProperties": [
+    {
+      "key": "sonar.scanner.app",
+      "value": "ScannerMSBuild"
+    },
+    {
+      "key": "sonar.scanner.appVersion",
+      "value": "11.2.1"
+    },
+    {
+      "key": "sonar.scanner.bootstrapStartTime",
+      "value": "1776564063000"
+    },
+    {
+      "key": "sonar.projectKey",
+      "value": "robot-controller-api"
+    },
+    {
+      "key": "sonar.working.directory",
+      "value": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\.sonarqube\\out\\.sonar"
+    },
+    {
+      "key": "sonar.projectBaseDir",
+      "value": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api"
+    },
+    {
+      "key": "sonar.pullrequest.cache.basepath",
+      "value": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api"
+    },
+    {
+      "key": "sonar.sources",
+      "value": ""
+    },
+    {
+      "key": "sonar.tests",
+      "value": ""
+    },
+    {
+      "key": "sonar.modules",
+      "value": "8FC57153-6628-F757-AF12-FEB9914EF14D"
+    },
+    {
+      "key": "8FC57153-6628-F757-AF12-FEB9914EF14D.sonar.projectKey",
+      "value": "robot-controller-api:8FC57153-6628-F757-AF12-FEB9914EF14D"
+    },
+    {
+      "key": "8FC57153-6628-F757-AF12-FEB9914EF14D.sonar.projectName",
+      "value": "robot-controller-api"
+    },
+    {
+      "key": "8FC57153-6628-F757-AF12-FEB9914EF14D.sonar.projectBaseDir",
+      "value": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api"
+    },
+    {
+      "key": "8FC57153-6628-F757-AF12-FEB9914EF14D.sonar.working.directory",
+      "value": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\.sonarqube\\out\\.sonar\\mod0"
+    },
+    {
+      "key": "8FC57153-6628-F757-AF12-FEB9914EF14D.sonar.sourceEncoding",
+      "value": "utf-8"
+    },
+    {
+      "key": "8FC57153-6628-F757-AF12-FEB9914EF14D.sonar.tests",
+      "value": ""
+    },
+    {
+      "key": "8FC57153-6628-F757-AF12-FEB9914EF14D.sonar.sources",
+      "value": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Controllers\\MapsController.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Controllers\\RobotCommandsController.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Models\\Map.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Models\\Robotcommand.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Persistence\\ExtensionMethods.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Persistence\\IMapDataAccess.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Persistence\\IRepository.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Persistence\\IRobotCommandDataAccess.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Persistence\\MapEF.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Persistence\\RobotCommandEF.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Persistence\\RobotContext.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Program.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\Debug\\net8.0\\robot-controller-api.GlobalUsings.g.cs,\"C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\Debug\\net8.0\\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs\",C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\Debug\\net8.0\\robot-controller-api.MvcApplicationPartsAssemblyInfo.cs,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\appsettings.Development.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\appsettings.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\db\\init.sql,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\docker-compose.prod.yml,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\docker-compose.yml,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Dockerfile,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Jenkinsfile,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\monitoring\\grafana\\provisioning\\dashboards\\dashboard.yml,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\monitoring\\grafana\\provisioning\\datasources\\prometheus.yml,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\monitoring\\prometheus.yml,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\Properties\\launchSettings.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\project.assets.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\robot-controller-api.csproj.nuget.dgspec.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\obj\\project.assets.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\obj\\robot_controller_api.Tests.csproj.nuget.dgspec.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\bin\\Debug\\net8.0\\appsettings.Development.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\bin\\Debug\\net8.0\\appsettings.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\bin\\Debug\\net8.0\\robot-controller-api.deps.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\bin\\Debug\\net8.0\\robot-controller-api.runtimeconfig.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\bin\\Debug\\net8.0\\robot-controller-api.staticwebassets.endpoints.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\Debug\\net8.0\\rjsmcshtml.dswa.cache.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\Debug\\net8.0\\rjsmrazor.dswa.cache.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\Debug\\net8.0\\robot-controller-api.sourcelink.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\Debug\\net8.0\\rpswa.dswa.cache.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\Debug\\net8.0\\staticwebassets.build.endpoints.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\obj\\Debug\\net8.0\\staticwebassets.build.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\bin\\Debug\\net8.0\\appsettings.Development.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\bin\\Debug\\net8.0\\appsettings.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\bin\\Debug\\net8.0\\MvcTestingAppManifest.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\bin\\Debug\\net8.0\\robot-controller-api.deps.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\bin\\Debug\\net8.0\\robot-controller-api.runtimeconfig.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\bin\\Debug\\net8.0\\robot-controller-api.staticwebassets.endpoints.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\bin\\Debug\\net8.0\\robot_controller_api.Tests.deps.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\bin\\Debug\\net8.0\\robot_controller_api.Tests.runtimeconfig.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\obj\\Debug\\net8.0\\MvcTestingAppManifest.json,C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\tests\\obj\\Debug\\net8.0\\robot_controller_api.Tests.sourcelink.json"
+    },
+    {
+      "key": "8FC57153-6628-F757-AF12-FEB9914EF14D.sonar.cs.analyzer.projectOutPaths",
+      "value": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\.sonarqube\\out\\0"
+    },
+    {
+      "key": "8FC57153-6628-F757-AF12-FEB9914EF14D.sonar.cs.roslyn.reportFilePaths",
+      "value": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\.sonarqube\\out\\0\\Issues.json"
+    },
+    {
+      "key": "8FC57153-6628-F757-AF12-FEB9914EF14D.sonar.cs.scanner.telemetry",
+      "value": "C:\\Users\\tisha\\OneDrive\\Desktop\\Sem4\\Professional Development\\HD\\robot-controller-api\\.sonarqube\\out\\0\\Telemetry.json"
+    },
+    {
+      "key": "sonar.token",
+      "value": "***"
+    },
+    {
+      "key": "sonar.host.url",
+      "value": "http://localhost:9000"
+    },
+    {
+      "key": "sonar.visualstudio.enable",
+      "value": "false"
+    }
+  ]
+}
